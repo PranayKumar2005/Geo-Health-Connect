@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration | HealthConnect</title>
+    <style>
+        body { background: #f4f7f6; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 380px; }
+        h2 { text-align: center; color: #333; margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 25px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; outline: none; transition: 0.3s; }
+        input:focus { border-color: #007bff; box-shadow: 0 0 5px rgba(0,123,255,0.2); }
+        button { width: 100%; padding: 14px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px; }
+        button:hover { background: #0056b3; }
+        .footer-text { text-align: center; font-size: 14px; margin-top: 20px; color: #555; }
+        .footer-text a { color: #007bff; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Patient Signup</h2>
+        <p class="subtitle">Join HealthConnect for emergency assistance.</p>
+        
+        <form action="user_register.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <button type="submit">Create Account</button>
+        </form>
+        
+        <div class="footer-text">
+            Already have an account? <a href="user_login.html">Login</a>
+        </div>
+    </div>
+</body>
+</html>

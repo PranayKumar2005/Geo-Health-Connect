@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Healthcare V3</title>
+    <style>
+        /* Keeping your existing beautiful styles */
+        body {
+            margin: 0; font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('stethoscope_bg.jpg');
+            background-size: cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;
+            overflow: hidden;
+        }
+        .container { text-align: center; animation: fadeIn 1.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .card-container { display: flex; gap: 30px; margin-top: 40px; }
+        .card {
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+            padding: 40px; border-radius: 20px; width: 280px; transition: 0.4s;
+            cursor: pointer; border: 1px solid rgba(255,255,255,0.2); text-decoration: none; color: white;
+        }
+        .card:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-10px); border-color: #007bff; }
+        .btn { background: #007bff; color: white; padding: 12px 25px; border-radius: 30px; margin-top: 20px; display: inline-block; font-weight: bold; }
+
+        /* New Footer Links */
+        .footer-links { position: absolute; bottom: 20px; display: flex; gap: 20px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; cursor: pointer; transition: 0.3s; }
+        .footer-links a:hover { color: white; text-decoration: underline; }
+
+        /* Modal / Popup Styles */
+        .modal {
+            display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: white; color: #333; margin: 10% auto; padding: 30px;
+            border-radius: 15px; width: 40%; animation: slideDown 0.5s;
+        }
+        @keyframes slideDown { from { transform: translateY(-100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .close-btn { float: right; font-size: 24px; cursor: pointer; color: #999; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>MODERN HEALTHCARE V3</h1>
+        <p>Connecting Patients and Doctors Instantly in Real-Time</p>
+        
+        <div class="card-container">
+            <a href="user_login.html" class="card">
+                <h2>Patient Portal</h2>
+                <p>Search doctors near you and share your emergency location.</p>
+                <div class="btn">Enter Now</div>
+            </a>
+           <a href="doctor_login.html" class="card"> <h2>Doctor Portal</h2>
+    <p>Register your clinic and receive instant emergency alerts.</p>
+    <div class="btn" style="background: #28a745;">Login / Join</div>
+</a>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a onclick="openModal('aboutModal')">About This Project</a>
+        <a onclick="openModal('contactModal')">Contact Support</a>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
+            <h2>About HealthConnect V3</h2>
+            <p>This project is designed to bridge the gap between patients and medical professionals during critical emergencies.</p>
+            <ul>
+                <li><strong>Real-time Filtering:</strong> Find doctors by city.</li>
+                <li><strong>GPS Integration:</strong> Share live location via WhatsApp.</li>
+                <li><strong>Dual Portals:</strong> Dedicated space for both users and doctors.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Have questions or need technical support?</p>
+            <p>📧 Email:pranaygouru25@gmail.com</p>
+            <p>📞 Emergency Hotline: 9912450839</p>
+            <p>📍 Location: Hyderabad, India</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

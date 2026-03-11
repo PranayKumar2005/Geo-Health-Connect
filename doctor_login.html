@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Login - Health V3</title>
+    <style>
+        body { background: #f4f7f6; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; border-top: 5px solid #28a745; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 14px; background: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background: #218838; }
+        .link { text-align: center; margin-top: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 style="text-align:center; color: #333;">Doctor Login</h2>
+        <form action="doctor_login.php" method="POST">
+            <input type="email" name="email" placeholder="Medical Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login to Dashboard</button>
+        </form>
+        <div class="link">New Doctor? <a href="doctor_register.html" style="color: #28a745;">Register Here</a></div>
+    </div>
+</body>
+</html>

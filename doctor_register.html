@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Signup | HealthConnect</title>
+    <style>
+        body { background: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); width: 380px; }
+        h2 { color: #333; text-align: center; margin-bottom: 20px; }
+        
+        /* Input Styling */
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; outline: none; transition: border 0.3s; }
+        input:focus { border-color: #28a745; box-shadow: 0 0 5px rgba(40, 167, 69, 0.2); }
+        
+        /* Helper Text */
+        small { color: #666; font-size: 0.8rem; margin-bottom: 10px; display: block; }
+        
+        button { width: 100%; padding: 14px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 6px; font-weight: bold; margin-top: 15px; font-size: 16px; transition: background 0.3s; }
+        button:hover { background: #218838; }
+        
+        .login-link { text-align: center; margin-top: 15px; font-size: 0.9rem; }
+        .login-link a { color: #28a745; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Doctor Registration</h2>
+        <form action="doctor_register.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="WhatsApp Number (e.g., 919876543210)" required>
+            <input type="text" name="hospital" placeholder="Clinic/Hospital Name" required>
+            
+            <small>Type your specific area to help patients find you.</small>
+            <input type="text" name="location" list="city-suggestions" placeholder="Enter Area (e.g., Ghatkesar)" required>
+            <datalist id="city-suggestions">
+                <option value="Ghatkesar">
+                <option value="Hyderabad">
+                <option value="Mumbai">
+                <option value="Bangalore">
+            </datalist>
+
+            <input type="text" name="spec" placeholder="Specialization (e.g., General Physician)" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            
+            <button type="submit">Create Account</button>
+        </form>
+        <div class="login-link">
+            Already registered? <a href="doctor_login.html">Login here</a>
+        </div>
+    </div>
+</body>
+</html>
