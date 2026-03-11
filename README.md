@@ -18,7 +18,7 @@ This project is a web-based portal for patient registration and login. It is des
 
 
 
-## 💻 Running in VS Code (Without XAMPP Control Panel)
+## 💻 Running in VS Code
 To run this project, you need:
 1. **PHP Installed**: Your system must have PHP added to the 'Path' environment variable.
 2. **VS Code Extensions**: 
